@@ -5,7 +5,7 @@ const ZUser = sequelize.define("ZUser", {
     type: DataTypes.STRING,
     allowNull: false,
     validate: {
-      not: ["^[a-z]+$", "i"],
+      isAlpha: true,
     },
   },
   lastName: {
